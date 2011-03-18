@@ -1,7 +1,7 @@
 Currentlee for ExpressionEngine 2.1
 =========
 
-**Currenlee** is a plugin that will return either the uri (segment_1/segment_2 etc...) or the url (http://www.example.com/segment_1/segment_2 etc...) for the current page from an EE2 template.
+**Currentlee** is a plugin that will return either the uri (segment_1/segment_2 etc...) or the url (http://www.example.com/segment_1/segment_2 etc...) for the current page from an EE2 template.
 
 Installation. The directory */currentlee* should be placed in */system/expressionengine/third_party/*
 
