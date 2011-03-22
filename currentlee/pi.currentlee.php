@@ -40,7 +40,7 @@ var $return_data = '';
 
 		$type = ($this->EE->TMPL->fetch_param('type')) ? strtolower(($this->EE->TMPL->fetch_param('type'))) : 'uri';
 		
-		if ($type == 'url') 
+		if ($type === 'url') 
 		{
 			$tagdata = current_url();
 		}
@@ -50,9 +50,6 @@ var $return_data = '';
 		}
 		
 		$this->return_data = $tagdata;
-		
-		return;
-
 	}
 
 	// --------------------------------------------------------------------
@@ -72,15 +69,15 @@ var $return_data = '';
 	  {
 	  ob_start(); 
 	  ?>
-	The Currentlee Plugin returns the URL or URI of the current page. Use the 'type' parameter to specify what you need.
+		The Currentlee Plugin returns the URL or URI of the current page. Use the 'type' parameter to specify what you need.
 	
-	e.g.
+		e.g.
 
-	{exp:currentlee} returns current page URI (default) - (/segment_1/segment_2/ ...)
+		{exp:currentlee} returns current page URI (default) - (/segment_1/segment_2/ ...)
 	
-	{exp:currentlee type="uri"} returns the same as above (redundant)
+		{exp:currentlee type="uri"} returns the same as above (redundant)
 	
-	{exp:currentlee type="url"} returns the current page URL (http://www.example.com/segment_1/segment_2/ ...)
+		{exp:currentlee type="url"} returns the current page URL (http://www.example.com/segment_1/segment_2/ ...)
 
 	  <?php
 	  $buffer = ob_get_contents();
